@@ -1,0 +1,151 @@
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #F9FAFB;
+  font-family: var(--font-family);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-logo {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-logo {
+  width: 300px;
+  object-fit: contain;
+}
+
+.auth-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1d1c1d;
+  margin: 0 0 8px;
+}
+
+.auth-subtitle {
+  font-size: 1rem;
+  color: #454245;
+  margin: 0;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-control {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.auth-button {
+  background-color: #455468;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-button:hover {
+  background-color: #3a4857;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-link {
+  color: #1EAEDB;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.logo-text {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  margin-right: 10px;
+}
+
+.forgot-password-link {
+  text-align: right;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.auth-error {
+  color: #e53e3e;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #fff5f5;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.auth-success {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.auth-success h3 {
+  margin-top: 0;
+  color: #38a169;
+}
+
+.auth-description {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.auth-error-container {
+  padding: 20px 0;
+  text-align: center;
+}

@@ -1,0 +1,168 @@
+.slack-clone {
+  display: flex;
+  height: 100vh;
+  background-color: var(--chatBg);
+  color: var(--chatText);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: calc(var(--sidebar-width) + var(--sidebar2-width));
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--chatBg);
+  color: var(--chatText);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.main-content.fullscreen {
+  margin-left: var(--sidebar-width);
+}
+
+.chat-body-wrapper {
+  position: fixed;
+  top: var(--header-height);
+  left: calc(var(--sidebar-width) + var(--sidebar2-width));
+  right: 0;
+  bottom: 60px; /* Height of ChatInput */
+  overflow-y: auto;
+  background-color: var(--chatBg);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.chat-body-wrapper.fullscreen {
+  left: var(--sidebar-width);
+}
+
+/* Modal backdrop for dialogs */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: var(--modalBg);
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: var(--modalText);
+  border: 1px solid var(--modalBorder);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--modalBorder);
+  padding-bottom: 10px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--modalText);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--modalText);
+  opacity: 0.7;
+}
+
+.modal-close:hover {
+  color: var(--modalText);
+  opacity: 1;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+  color: var(--modalText);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.btn-cancel {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--modalText);
+  border: none;
+}
+
+.btn-cancel:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit {
+  background-color: var(--buttonBg);
+  color: var(--buttonText);
+  border: none;
+}
+
+.btn-submit:hover {
+  background-color: var(--buttonHoverBg);
+}
+
+/* Adding styles for user profile */
+.user-profile-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.user-avatar-large {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-details h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--modalText);
+}
+
+.user-details p {
+  margin: 5px 0;
+  color: var(--modalText);
+  opacity: 0.7;
+}

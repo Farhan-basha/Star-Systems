@@ -1,0 +1,104 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default theme variables */
+  --sidebarBg: #4A154B;
+  --sidebarText: #FFFFFF;
+  --sidebarHover: #3F0E3F;
+  --sidebarBorder: rgba(255, 255, 255, 0.1);
+  --chatBg: #FFFFFF;
+  --chatText: #1D1C1D;
+  --chatInputBg: #F8F8F8;
+  --chatInputBorder: #DDDDDD;
+  --headerBg: #FFFFFF;
+  --headerText: #1D1C1D;
+  --accent: #1264A3;
+  --accentHover: #0B4C8C;
+  --mentionBg: #ECF5FB;
+  --mentionColor: #1264A3;
+  --link: #1264A3;
+  --divider: #EEEEEE;
+  --buttonBg: #007a5a;
+  --buttonText: #FFFFFF;
+  --buttonHoverBg: #148567;
+  --modalBg: #FFFFFF;
+  --modalText: #1D1C1D;
+  --modalBorder: #DDDDDD;
+
+  /* Global layout variables */
+  --sidebar-width: 64px;
+  --sidebar2-width: 220px;
+  --header-height: 60px;
+  
+  /* Colors */
+  --white: #FFFFFF;
+  --sidebar-bg: var(--sidebarBg);
+  --ocean-blue: var(--accent);
+  --bright-blue: var(--accentHover);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--chatBg);
+  color: var(--chatText);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Global theme transitions */
+button, 
+input, 
+textarea, 
+select {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Apply theme colors to all elements with specific classes */
+.theme-bg-primary {
+  background-color: var(--accent);
+  color: var(--buttonText);
+}
+
+.theme-bg-secondary {
+  background-color: var(--chatBg);
+  color: var(--chatText);
+}
+
+.theme-border {
+  border-color: var(--divider);
+}
+
+.theme-link {
+  color: var(--link);
+}
+
+.theme-link:hover {
+  color: var(--accentHover);
+}

@@ -1,0 +1,241 @@
+
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--sidebar-bg);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-md) 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.workspace-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.workspace-avatar {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: #5865F2;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: border-radius 0.2s ease;
+  position: relative;
+}
+
+.workspace-avatar:hover, .workspace-avatar.active {
+  border-radius: 12px;
+}
+
+.workspace-avatar.active::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  width: 4px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 0 4px 4px 0;
+}
+
+.add-workspace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #2a2d32;
+  color: #3BA55C;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 24px;
+}
+
+.add-workspace:hover {
+  background-color: #3BA55C;
+  color: white;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  flex: 1;
+}
+
+.sidebar-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+  color: #ccc;
+}
+
+.sidebar-menu-item:hover {
+  background-color: #2a2d32;
+  color: #fff;
+}
+
+.sidebar-menu-item.active {
+  background-color: #2a2d32;
+  color: #fff;
+  position: relative;
+}
+
+.sidebar-menu-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 20px;
+  width: 3px;
+  background-color: #fff;
+}
+
+.sidebar-icon {
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-label {
+  font-size: var(--font-size-xs);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #1264a3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+}
+
+/* Modal styling for workspace creation */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  color: #333;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background-color: #eee;
+  color: #333;
+  border: none;
+}
+
+.btn-submit {
+  background-color: #0EA5E9;
+  color: white;
+  border: none;
+}
