@@ -51,9 +51,14 @@ const useMessagesManagement = () => {
     if (channelSocketRef.current) channelSocketRef.current.close();
 
     currentChannelId.current = channelId;
+    // const socket = new WebSocket(
+    //   `ws://127.0.0.1:8000/ws/chat/channel_${channelId}/?token=${token}`
+    // );
+
     const socket = new WebSocket(
-      `ws://127.0.0.1:8000/ws/chat/channel_${channelId}/?token=${token}`
+      `wss://https://backend-7tz9.onrender.com/ws/chat/channel_${channelId}/?token=${token}`
     );
+    
     channelSocketRef.current = socket;
 
     socket.onopen = () =>
