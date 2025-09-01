@@ -7,3 +7,4 @@ django
 psycopg2-binary 
 channels-redis 
 dj-database-url
+daphne
