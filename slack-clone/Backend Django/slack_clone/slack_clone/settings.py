@@ -89,15 +89,21 @@ CHANNEL_LAYERS = {
 }
 
 # Database (PostgreSQL)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'admin',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get("postgresql://postgres_4jtk_user:WrNRCxu7bgtyu96ppx88GcFFYLdvD0MF@dpg-d2qnntje5dus73caf0j0-a/postgres_4jtk")
+    )
 }
 
 # Auth password validation
