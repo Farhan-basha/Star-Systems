@@ -101,7 +101,7 @@ const SlackClone = () => {
     setCurrentChannel(null);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/dm-groups/", {
+      const res = await fetch("https://backend-7tz9.onrender.com/api/dm-groups/", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,

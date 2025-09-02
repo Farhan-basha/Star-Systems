@@ -12,7 +12,7 @@ const useMessagesManagement = () => {
   const fetchChannelMessages = async (channelId) => {
     try {
       const res = await fetch(
-        `http://127.0.0.1:8000/api/channels/${channelId}/messages/`,
+        `https://backend-7tz9.onrender.com/api/channels/${channelId}/messages/`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -28,7 +28,7 @@ const useMessagesManagement = () => {
   const fetchDirectMessages = async (dmGroupId) => {
     try {
       const res = await fetch(
-        `http://127.0.0.1:8000/api/dm-groups/${dmGroupId}/messages/`,
+        `https://backend-7tz9.onrender.com/api/dm-groups/${dmGroupId}/messages/`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -79,7 +79,7 @@ const useMessagesManagement = () => {
 
     currentDmGroupId.current = dmGroupId;
     const socket = new WebSocket(
-      `ws://127.0.0.1:8000/ws/chat/dm_${dmGroupId}/?token=${token}`
+      `wss://https://backend-7tz9.onrender.com/ws/chat/dm_${dmGroupId}/?token=${token}`
     );
     dmSocketRef.current = socket;
 
@@ -109,7 +109,7 @@ const useMessagesManagement = () => {
 
     try {
       const res = await fetch(
-        `http://127.0.0.1:8000/api/channels/${channelObj.id}/messages/`,
+        `https://backend-7tz9.onrender.com/api/channels/${channelObj.id}/messages/`,
         {
           method: "POST",
           headers: { Authorization: `Bearer ${token}` },
@@ -141,7 +141,7 @@ const useMessagesManagement = () => {
 
     try {
       const res = await fetch(
-        `http://127.0.0.1:8000/api/dm-groups/${dmGroupId}/messages/`,
+        `https://backend-7tz9.onrender.com/api/dm-groups/${dmGroupId}/messages/`,
         {
           method: "POST",
           headers: { Authorization: `Bearer ${token}` },

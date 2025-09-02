@@ -40,7 +40,7 @@ const useChannelManagement = () => {
   if (!channelName) return;
 
   try {
-    const response = await fetch(`http://localhost:8000/api/channels/`, {
+    const response = await fetch(`https://backend-7tz9.onrender.com/api/channels/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

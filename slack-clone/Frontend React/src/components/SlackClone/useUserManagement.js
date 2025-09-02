@@ -26,7 +26,7 @@ const useUserManagement = () => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem('accessToken');
-        const res = await fetch('http://localhost:8000/api/users/', {
+        const res = await fetch('http://backend-7tz9.onrender.com/api/users/', {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (!res.ok) throw new Error("Failed to fetch users");
