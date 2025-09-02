@@ -22,7 +22,7 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:8000/api/token/", {
+      const response = await fetch("https://backend-7tz9.onrender.com/api/token/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
